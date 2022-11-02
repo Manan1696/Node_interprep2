@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body bgcolor="Grey">
+    <h2>Q1. What are the different types of HTTP requests?</h2>
+        HTTP (Hypertext Transfer Protocol) specifies a collection of request methods to specify what action is to be performed
+        on a particular resource.<br>
+        The most commonly used HTTP request methods are GET, POST, PUT, PATCH, and DELETE. These are equivalent to the CRUD
+        operations (create, read, update, and delete).
+    <ul>
+    <li>GET : GET request is used to read/retrieve data from a web server. GET returns an HTTP status code of 200 (OK)
+        if
+        the data is successfully retrieved from the server.</li>
+    <li>POST : POST request is used to send data (file, form data, etc.) to the server. On successful creation, it
+        returns an HTTP status code of 201.</li>
+    <li>PUT : A PUT request is used to modify the data on the server. It replaces the entire content at a particular
+        location with data that is passed in the body payload. <br> If there are no resources that match the request, it
+        will
+        generate one.</li>
+    <li>PATCH : PATCH is similar to PUT request, but the only difference is, it modifies a part of the data. It will
+        only
+        replace the content that you want to update.</li>
+    <li>DELETE : A DELETE request is used to delete the data on the server at a specified location.</li>
+    </ul>
+    <hr>
+
+    <h2>Q2. Explain the concept of middleware in Node.js.</h2>
+    <ul>
+        <li>Middleware are like general function which takes three parameters as request,response and next.</li>
+        <li>These middleware are used to execute some function before the resposne is send back to the client.</li>
+        <li>Middleware mostly get used for authentication if the API request is called from the client with proper user credentials or not.</li>
+        <li>next() function is very important,after the end of each middleware we should execute the next() function so that the program execution can move w=either to next middleware or to main route.</li>
+    </ul><br>
+    <hr>
+
+    <h2>Q3. Explain CORS?</h2>
+    <p>CORS : (Cross-Origin Resource Sharing) is a mechanism by which data or any other resource of a site could be shared intentionally to a third party website when there is a need. 
+       Generally, access to resources that are residing in a third party site is restricted by the browser clients for security purposes.</p>
+    
+    <hr>
+    <h2>Q4. What is Express? How does it help you to create a backend application?</h2>
+      <p>Express.js: Express is a small framework that sits on top of Node.js’s web server functionality to simplify its APIs and add helpful new features. It makes it easier to organize your. application’s functionality with
+        middleware and routing. It adds helpful utilities to Node.js’s HTTP objects. It facilitates the rendering of dynamic HTTP objects. *More features than Node.js *It is used to build web-apps using approaches and
+        principles of Node.js. *Routing is provided. *It requires less coding time. *Uses middleware for the arrangement of functions systematically server-side. *import by const express = require ("express")
+    </p>
+    <hr>
+
+    <h2>Q5. Explain min 5 status codes gets used in Backend development?</h2>
+    <p>An HTTP status code is a message a website's server sends to the browser to indicate whether or not that request can be fulfilled. Status codes specs are set by the W3C. Status codes are embedded in the HTTP header of a page to tell the browser the result of its request. </p>
+    <ul>
+    <li>*102 PROCESSING Processing 200 OK OK </li>
+    <li>*400 BAD_REQUEST Bad Request </li>
+    <li>*401 UNAUTHORIZED Unauthorized </li>
+    <li>*402 PAYMENT_REQUIRED Payment Required </li>
+    <li>*403 FORBIDDEN Forbidden</li>
+    <li>*404 NOT_FOUND Not Found</li>
+    <li>*500 INTERNAL_SERVER_ERROR Internal Server Error</li>
+    <li>*503 - Service Unavailable</li>
+    </ul>
+    <hr>
+
+    <h2>Q6. Difference between HTTP and HTTPS.</h2>
+    <p>HTTPS is HTTP with encryption and verification. The only difference between the two protocols is that HTTPS uses TLS (SSL) to encrypt normal
+      HTTP requests and responses, and to digitally sign those requests and responses. As a result, HTTPS is far more secure than HTTP.
+    </p>
+    <hr>
+
+    <h2>Q7. What are JWT tokens?</h2>
+    <p>To achieve authentication in the APIs, we use JWT tokens.They stand for JSON Web Tokens.When any user logs-in by giving its username and password, then we will receive the username and password in the request body of the API.</p>
+    <p>Then using username and password we will create one token and assign it to the user.Then whenever this user will be calling any API, then this token will be passed from front-end application, then from backend application we will verify this token is valid or not.This is how we can achieve authentication in the APIs using JWT tokens.
+    </p>
+    </body>
+</html>
